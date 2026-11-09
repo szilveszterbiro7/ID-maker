@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"></a>
+    <link rel="stylesheet" href="style.css">
     <title>ID Maker</title>
 </head>
 <body>
@@ -34,10 +34,43 @@
                 <label for="photo">Profile Picture</label>
                 <input type="file" id="photo" accept="image/*">
             </div>
+            <div class="group">
+                <label for="theme">Card Theme</label>
+                <select id="theme">
+                    <option value="government">Government</option>
+                    <option value="cyberpunk">Cyberpunk</option>
+                    <option value="agent">Agent</option>
+                </select>
+            </div>
+            <button id="generate_btn">Generate ID</button>
             <h2>Customize ID</h2>
         </section>
         <section class="preview">
             <h2>Preview card</h2>
+            <div class="id-card" id="id-card">
+            <div class="card-header">
+                <h3>IDENTITY CARD</h3>
+                <span>Fictional ID</span>
+            </div>
+             <div class="card-content">
+                <div class="photo-cont">
+                    <img id="card-photo" alt="Profile picture">
+             </div>
+             <div class="card-info">
+                <p>NAME</p>
+                <h3 id="card-name">YOUR NAME</h3>
+                <p>AGE</p>
+                <h3 id="card-age">--</h3>
+                <p>OCCUPATION</p>
+                <h3 id="card-occupation">UNKNOWN</h3>
+             </div>
+            </div>
+            <div class="card-footer">
+                <span id="card-id">ID: 00000000</span>
+                <span>NOT VALID ID</span>
+            </div>
+            </div>
+            <button id="download-btn">Download PNG</button>
         </section>
     </main>
 </body>

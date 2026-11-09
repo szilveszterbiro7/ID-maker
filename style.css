@@ -5,10 +5,32 @@
 body{
     font-family:Arial, Helvetica, sans-serif;
     background:#016d5b;
-    color:#185502;
+    color:#000037;
     min-height: 100vh;
     padding: 40px 20px;
 }
 .container{
     max-width:1100px;
+}
+header{
+    text-align:center;
+}
+header h1{
+    font-size:32px;
+    color:#011f2c;
+}
+header p{
+    color:#94a3b8;
+    margin-top:10px;
+}
+main{
+    display:grid;
+    padding:30px;
+    border-radius:16px;
+    border:1px solid #29374d;
+}.editor, .preview{
+    background:#3e5378;
+    padding:30px;
+    border-radius:16px;
+    border:1px solid #29374d;
 }
