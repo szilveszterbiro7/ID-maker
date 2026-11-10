@@ -190,3 +190,17 @@ button:active{
 .id-card.agent .card-header, .id-card.agent .card-footer{
     border-color:#57534e;
 }
+.qr{
+    background: #ffff;
+    padding:6px;
+    border-radius:6px;
+    flex-shrink:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#qr-code img, #qr-code canvas{
+    width:75px;
+    height:75px;
+    display:block;
+}

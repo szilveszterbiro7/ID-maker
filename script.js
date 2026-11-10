@@ -11,11 +11,12 @@ const cardPhoto=document.getElementById("card-photo")
 const themeInput=document.getElementById("theme")
 const idCard=document.getElementById("id-card")
 const download=document.getElementById("download-btn")
+const qr=document.getElementById("qr-code")
 generateBtn.addEventListener("click", function(){
     console.log("Generate button clicked!");
 });
 generateBtn.addEventListener("click", function(){
-    const randomId=Math.floor(10000000 + Math.random() * 90000000);
+    const randomId=Math.floor(10000000+Math.random()*90000000);
     cardId.textContent="ID: "+randomId;
     const name=nameInput.value;
     const age=ageInput.value;
@@ -24,6 +25,16 @@ generateBtn.addEventListener("click", function(){
     cardName.textContent=name || "YOUR NAME";
     cardAge.textContent=age || "--";
     cardOcc.textContent=occupation || "UNKNOWN";
+    qr.innerHTML="";
+    const qrText="Name: "+name+"\nOccupation: "+occupation+"\nID"+randomId;
+    new QRCode(qr, {
+        text:qrText,
+        width:150,
+        height:150,
+        colorDark: "#000000",
+        colorLight: "#ffffff",
+        correctLevel:  QRCode.CorrectLevel.M
+    });
 });
 photoInput.addEventListener("change", function(){
     const file=photoInput.files[0];
