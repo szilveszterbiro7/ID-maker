@@ -12,6 +12,9 @@ const themeInput=document.getElementById("theme")
 const idCard=document.getElementById("id-card")
 const download=document.getElementById("download-btn")
 const qr=document.getElementById("qr-code")
+const bgColor=document.getElementById("bg-color")
+const textColor=document.getElementById("text-color");
+const accentColor=document.getElementById("accent-color");
 generateBtn.addEventListener("click", function(){
     console.log("Generate button clicked!");
 });
@@ -60,4 +63,21 @@ download.addEventListener("click", function(){
         link.href=canvas.toDataURL("image/png");
         link.click();
     });
+});
+bgColor.addEventListener("input", function(){
+    idCard.style.background=bgColor.value;
+});
+textColor.addEventListener("input", function (){
+    idCard.classList.add("custom-text");
+    idCard.style.color=textColor.value;
+});
+accentColor.addEventListener("input", function(){
+    idCard.style.borderColor=accentColor.value;
+    const heading=idCard.querySelector(".card-header h3");
+    const header=idCard.querySelector(".card-header");
+    const footer=idCard.querySelector(".card-header footer");
+    heading.style.color=accentColor.value;
+    cardId.style.color=accentColor.value;
+    header.style.borderColor=accentColor.value;
+    footer.style.borderColor=accentColor.value;
 });
