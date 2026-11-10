@@ -8,6 +8,9 @@ const generateBtn=document.getElementById("generate_btn");
 const cardId=document.getElementById("card-id");
 const photoInput=document.getElementById("photo")
 const cardPhoto=document.getElementById("card-photo")
+const themeInput=document.getElementById("theme")
+const idCard=document.getElementById("id-card")
+const download=document.getElementById("download-btn")
 generateBtn.addEventListener("click", function(){
     console.log("Generate button clicked!");
 });
@@ -28,4 +31,22 @@ photoInput.addEventListener("change", function(){
         const imageUrl=URL.createObjectURL(file);
         cardPhoto.src=imageUrl;
     }
+});
+function newTheme(){
+    const selectedTheme=themeInput.value;
+    idCard.classList.remove("government", "cyberpunk", "agent");
+    idCard.classList.add(selectedTheme);
+}
+themeInput.addEventListener("change", newTheme);
+newTheme();
+download.addEventListener("click", function(){
+    html2canvas(idCard, {
+        scale: 2,
+        useCORS:true
+    }).then (function(canvas){
+        const link=document.createElement("a");
+        link.download="my-id-card.png";
+        link.href=canvas.toDataURL("image/png");
+        link.click();
+    });
 });

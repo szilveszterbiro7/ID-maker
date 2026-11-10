@@ -159,3 +159,34 @@ button:active{
 .card-footer span:last-child {
     color: #94a3b8;
 }
+.id-card.government{
+    background: linear-gradient(135deg, #a0b7d8, #475f87);
+    border: 1px solid #2563eb;
+    color: #ffff;
+}
+.id-card.government .card-header h3, .id-card.government .card-footer #card-id{
+    color: #005a81;
+}
+.id-card.cyberpunk{
+    background: linear-gradient(135deg, #7d4ca9, #1e0c2b);
+    border: 2px solid #e879f9;
+    color: #e5f328;
+    box-shadow:  0 0 25px rgba(232, 121, 249, 0.25);
+}
+.id-card.cyberpunk .card-header h3, .id-card.cyberpunk .card-footer #card-id{
+    color: #e5f328;
+}
+.id-card.cyberpunk .card-header, .id-card.cyberpunk .card-footer{
+    border-color:#7e22ce;
+}
+.id-card.agent{
+    background: linear-gradient(135deg, #231f1e, #0c0a09);
+    border: 1px solid #a3a3a3;
+    color:#ffff;
+}
+.id-card.agent .card-header h3, .id-card.agent .card-footer #card-id{
+    color: #a17300;
+}
+.id-card.agent .card-header, .id-card.agent .card-footer{
+    border-color:#57534e;
+}
